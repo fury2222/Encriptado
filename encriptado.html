@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encriptado</title>
+    <link rel="stylesheet" href="encriptado.css">
+    <script src="encriptado.js" defer></script>
+</head>
+<body>
+    <div>
+        <div class="logo"> 
+            <img src="imagen/a.png" alt="">
+        </div>
+        <form>
+            <div class="parrafo">
+                <input type="text" id="inputText" placeholder="Ingrese el texto aquí">
+            </div>
+        </form>
+        <div class="logo2">
+            <img src="imagen/logo2-removebg-preview.png" alt="" height="30px">
+        </div>
+        <div class="b">
+            <button class="boton1" onclick="encriptar()">Encriptar</button>
+        </div>
+        <div class="b">
+            <button class="boton2" onclick="desencriptar()">Desencriptar</button>
+        </div>
+
+        <div class="contenedor" id="contenedor">
+            <div class="contenedor2 frente">
+                <img src="imagen/logo3-removebg-preview.png" alt="" height="200px" id="resultImage">
+                <img src="imagen/logo4-removebg-preview.png" alt="" height="100px" class="logo4">
+            </div>
+            <div class="cara atras" id="resultContainer">
+                <div id="resultText"></div>
+                <div class="b">
+                    <button class="boton3" onclick="copiar()">Copiar</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

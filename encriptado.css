@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    position: relative;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.logo {
+    justify-content: center;
+    position: absolute;
+    margin-top: 10px;
+    left: 30px;
+}
+
+.parrafo {
+    font-size: 20px;
+    position: absolute;
+    text-align: center;
+    top: 130px;
+    left: 300px;
+}
+
+.logo2 {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    transform: translate(-80%, -30%);
+}
+
+.parrafo input[type="text"] {
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 10px;
+    font-size: 22px;
+    outline: none;
+}
+
+.parrafo input[type="text"]::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.boton1 {
+    position: absolute;
+    top: 88%;
+    left: 38%;
+    transform: translate(-88%, -38%);
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 30px;
+    height: 80px;
+    width: 350px;
+}
+
+.boton2 {
+    position: absolute;
+    top: 91%;
+    left: 65%;
+    transform: translate(-91%, -65%);
+    background-color: rgba(119, 119, 128, 0.719);
+    color: rgb(5, 3, 110);
+    font-size: 20px;
+    border-radius: 30px;
+    height: 80px;
+    width: 350px;
+}
+
+.boton3{
+    position: absolute;
+    top: 91%;
+    left: 84%;
+    transform: translate(-91%, -65%);
+    background-color: rgba(119, 119, 128, 0.719);
+    color: rgb(5, 3, 110);
+    font-size: 20px;
+    border-radius: 30px;
+    height: 80px;
+    width: 200px;
+}
+
+#resultImage{
+    position: absolute;
+    top: 150px;
+    
+}
+
+.logo4{
+    position: absolute;
+    top: 350px;
+}
+
+.contenedor {
+    width: 250px;
+    height: 650px;
+    perspective: 1000px; /* Añade profundidad para el efecto 3D */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translatey(-50%);
+
+}
+
+.contenedor2, .cara.atras {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Oculta la parte trasera cuando se rota */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.frente {
+    background-color: white;
+    border: 2px solid #ccc;
+}
+
+.atras {
+    background-color: white;
+    border: 2px solid #ccc;
+    transform: rotateY(180deg); /* Inicialmente rotada 180 grados */
+}
+
+.contenedor.rotar .frente {
+    transform: rotateY(180deg); /* Voltea la cara frontal */
+}
+
+.contenedor.rotar .atras {
+    transform: rotateY(0deg); /* Coloca la cara trasera en posición */
+}
+
+.contenedor.rotar .frente,
+.contenedor.rotar .atras {
+    transition: transform 0.6s; /* Suaviza la transición de rotación */
+}
+
+
